@@ -7,5 +7,24 @@
 </head>
 <body>
     <a href="index.html">Voltar</a>
+
+
+    
+    <input type="text" id="numero">
+    <button onclick="inserirValor()">Adicionar</button>
+    
+
+    <script>
+    var Vet = new Array();
+    function inserirValor(){
+        var num = document.getElementById("numero").value;
+        console.log("oi");
+        console.log(num);
+        Vet.push(num);
+        console.log(Vet);
+    }
+
+
+    </script>
 </body>
 </html>
