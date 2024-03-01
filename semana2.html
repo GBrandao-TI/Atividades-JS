@@ -8,20 +8,37 @@
 <body>
     <a href="index.html">Voltar</a>
 
-
+    
     
     <input type="text" id="numero">
     <button onclick="inserirValor()">Adicionar</button>
     
+    <ol id="lista" type="I"></ol>
 
     <script>
     var Vet = new Array();
     function inserirValor(){
         var num = document.getElementById("numero").value;
-        console.log("oi");
+        
         console.log(num);
         Vet.push(num);
+        Vet.sort(function(a,b){
+            return a - b;
+        });
+        
         console.log(Vet);
+        var lista = document.getElementById("lista");
+        lista.innerHTML = "";
+
+        Vet.forEach(element =>{
+            var li = document.createElement("li");
+            var valor = document.createTextNode(element);
+            li.appendChild(valor);
+            lista.appendChild(li);
+        });
+
+    
+        
     }
 
 
