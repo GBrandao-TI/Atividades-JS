@@ -14,8 +14,8 @@
 
         if (confirm("Deseja verificar o tipo do valor informado? ")) {
             if (!isNaN(parseInt(valor)) && parseInt(valor).toString() === valor) {
-            alert("é inteiro");
-            alert(typeof(parseInt(valor)));
+                alert("é inteiro");
+                
             } 
             else if (!isNaN(parseFloat(valor)) && parseFloat(valor).toString() === valor) {
                 alert("é float");
