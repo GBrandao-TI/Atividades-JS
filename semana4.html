@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="semana4.js"></script>
+    <title>Semana 4 | Classes</title>
+</head>
+<body>
+
+    <a href="index.html">Voltar</a>
+
+    <div class="container mt-4">
+        <form>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="nome" class="form-label">Nome:</label>
+                    <input type="text" class="form-control" id="nome" name="nome" />
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="email" name="email" />
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="dataNasc" class="form-label">Data de Nascimento:</label>
+                    <input type="date" class="form-control" id="dataNasc" name="dataNasc" />
+                </div>
+                <div class="col-md-6">
+                    <label for="telFixo" class="form-label">Telefone Fixo:</label>
+                    <input type="text" class="form-control" name="telFixo" id="telFixo" />
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="telCelular" class="form-label">Telefone Celular:</label>
+                    <input type="text" class="form-control" name="telCelular" id="telCelular" />
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <input type="radio" class="form-check-input fw-bold" id="aluno" name="categoria" value="aluno" onclick="mostrarInputs('aluno')">
+                    <label class="form-check-label fw-bold" for="aluno">Aluno</label>
+                </div>
+                <div class="col-md-2">
+                    <input type="radio" class="form-check-input fw-bold" id="professor" name="categoria" value="professor" onclick="mostrarInputs('professor')">
+                    <label class="form-check-label fw-bold" for="professor">Professor</label>
+                </div>
+            </div>
+            
+
+            <div id="inputAluno" class="row mb-3" style="display:none;">
+                <div class="col-md-6">
+                    <label for="curso" class="form-label">Curso:</label>
+                    <input type="text" class="form-control" id="curso" name="curso">
+                </div>
+                <div class="col-md-6">
+                    <label for="matriculaAluno" class="form-label">Matrícula:</label>
+                    <input type="text" class="form-control" id="matriculaAluno" name="matriculaAluno">
+                </div>
+            </div>
+
+            <div id="inputProfessor" class="row mb-3" style="display:none;">
+                <div class="col-md-6">
+                    <label for="area" class="form-label">Área:</label>
+                    <input type="text" class="form-control" id="area" name="area">
+                </div>
+                <div class="col-md-6">
+                    <label for="matriculaProfessor" class="form-label">Matrícula:</label>
+                    <input type="text" class="form-control" id="matriculaProfessor" name="matriculaProfessor">
+                </div>
+                <div class="col-md-6">
+                    <label for="lattes" class="form-label">Lattes:</label>
+                    <input type="text" class="form-control" id="lattes" name="lattes">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-primary" onclick="Enviar()">Enviar</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-secondary" onclick="Limpar()">Redefinir</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
