@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     inputMulheres.style.display = "block";
     inputMulheres.style.position = "absolute";
     inputMulheres.style.right = "20%";
-    inputMulheres.style.top = "60%";
+    inputMulheres.style.top = "50%";
 
 
     function redimensionarImagens(largura, altura) {
