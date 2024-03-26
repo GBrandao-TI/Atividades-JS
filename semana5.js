@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     
 
     adicionarMulher.style.position = "absolute";
-    adicionarMulher.style.right = "40%";
+    adicionarMulher.style.right = "30%";
     adicionarMulher.style.top = "60%";
 
     subtrairMulher.style.position = "absolute";
