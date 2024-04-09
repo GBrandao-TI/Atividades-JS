@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>S7 - Pimeiro Projeto React</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>  
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+
+    <a href="index.html">Voltar</a>
+
+    
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        function Letreiro(){
+            const frase = "Venha estudar na Fatec";
+
+            const[texto, setTexto] = React.useState('');
+
+            React.useEffect(() =>{
+                let i = 0;
+                const tempo = setInterval(() =>{
+                    if(i < frase.length){
+                        setTexto(frase.substring(0, i + 1));
+                        i++;
+                    }
+                    else{
+                        clearInterval(tempo);
+                    }
+                }, 500);
+
+            return () => clearInterval(timer);
+            
+            }, []);
+
+            return <h1>{texto}</h1>;
+        }
+
+        ReactDOM.render(<Letreiro />, document.getElementById('root'));    
+    
+
+    </script>
+
+
+    
+</body>
+</html>
